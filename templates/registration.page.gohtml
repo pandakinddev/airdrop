@@ -1,0 +1,131 @@
+{{ template "base" . }} 
+
+{{ define "style" }}
+<style>
+        * {
+            box-sizing: border-box;
+            color: #253050;
+        }
+
+        @font-face {
+            font-family: 'Brown';
+            src: url('static/fonts/Brown-Regular.ttf');
+        }
+
+        .container {
+            height: 100vh;
+            padding-top: 100px;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 60%;
+            max-width: 570px;
+            padding: 0 20px;
+            font-family: 'Brown';
+            font-style: normal;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 54px;
+            line-height: 64px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: bold;
+        }
+
+        .input-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-cred {
+            border: 1px solid #D0D2DA;
+            box-sizing: border-box;
+            border-radius: 8px;
+            height: 48px;
+            margin-bottom: 28px;
+            padding: 0 45px;
+            background-position: 15px center;
+            background-repeat: no-repeat;
+        }
+
+        #wallet-input {
+            background-image: url("static/images/icon-wallet.svg");
+        }
+
+        #nickname-input {
+            background-image: url("static/images/icon-nickname.svg");
+        }
+
+        .button-connect {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #D0D2DA;
+            box-sizing: border-box;
+            border-radius: 28px;
+            height: 54px;
+            background-color: #FFFFFF;
+            margin-bottom: 28px;
+        }
+
+        .button-connect-content {
+            display: flex;
+            width: 125px;
+        }
+        .via-icon {
+            margin-right: 17px;
+        }
+        @media only screen and (max-width: 620px) {
+            /* For mobile phones: */
+            .main {
+                width: 100%;
+                font-size: 24px;
+                margin: 0 auto;
+            }
+        }
+</style>
+{{end}}
+{{ define "body" }}
+    <div class="container">
+        <div class="main">
+            <h2>Join Promotion</h2>
+            <section class="inputs-section">
+                <div class="input-wrap">
+                    <label for="wallet-input">Wallet Address</label>
+                    <input class="input-cred" id="wallet-input" placeholder="Wallet Address" />
+                </div>
+                <div class="input-wrap">
+                    <label for="nickname-input">Your Nick</label>
+                    <input class="input-cred" id="nickname-input" placeholder="Your Nick" />
+                </div>
+            </section>
+            <section class="buttons-section">
+                <button class="button-connect">
+                    <div class="button-connect-content"><img class="via-icon" src="public/icon-google.svg" />
+                        <p>Via Google</p>
+                    </div>
+                </button>
+                <button class="button-connect">
+                    <div class="button-connect-content"><img class="via-icon" src="public/icon-facebook.svg" />Via
+                        Facebook</div>
+                </button>
+                <button class="button-connect">
+                    <div class="button-connect-content"><img class="via-icon" src="public/icon-twitter.svg" />Via
+                        Twitter</div>
+                </button>
+            </section>
+        </div>
+    </div>
+{{ end }}

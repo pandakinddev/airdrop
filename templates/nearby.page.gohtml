@@ -1,0 +1,58 @@
+{{ template "base" . }}
+
+{{ define "style" }}
+<style>
+        * {
+            box-sizing: border-box;
+            color: #253050;
+        }
+
+        @font-face {
+            font-family: 'Brown';
+            src: url('public/Brown-Regular.ttf');
+        }
+
+        .container {
+            height: 100vh;
+            background: radial-gradient(78% 77% at 35.67% 33.81%, #FFD1B7 0%, rgba(251, 249, 255, 0) 100%);
+        }
+        .main {
+            margin: 0 auto 200px auto;
+            width: 60%;
+            max-width: 570px;
+            padding: 0 20px;
+            text-align: center;
+            font-family: 'Brown';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 54px;
+            line-height: 64px;
+        }
+
+        .panda-img {
+            margin-top: 200px;
+        }
+
+        @media only screen and (max-width: 620px) {
+            /* For mobile phones: */
+            .main {
+                width: 100%;
+                font-size: 24px;
+                margin: 0 auto;
+            }
+
+            .panda-img {
+                margin-top: 30px;
+            }
+        }
+    </style>
+{{ end }}
+
+{{ define "body" }}
+<div class="container">
+    <div class="main">
+        <img class="panda-img" src="static/images/panda-bg.svg" alt="PandaSwap">
+        <h2>Airdrop contract has not been connected yet</h2>
+        </div>
+</div>
+{{ end }}
