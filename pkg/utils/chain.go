@@ -4,9 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/HungryPandaHome/airdrop/pkg/airdrop"
 	"github.com/HungryPandaHome/airdrop/pkg/defs"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
 )
@@ -21,19 +19,19 @@ func GetStage(ctx context.Context,
 		return defs.StageUnknown, nil
 	}
 	address := common.HexToAddress(*contract)
-
-	instance, err := airdrop.NewTimedCaller(address, client)
-	if err != nil {
-		return defs.StageUnknown, err
-	}
-	status, err := instance.Status(&bind.CallOpts{
-		From:    account,
-		Context: ctx,
-	})
-	if err != nil {
-		return defs.StageUnknown, err
-	}
-	switch status {
+	_ = address
+	// instance, err := airdrop.NewTimedCaller(address, client)
+	// if err != nil {
+	// 	return defs.StageUnknown, err
+	// }
+	// status, err := instance.Status(&bind.CallOpts{
+	// 	From:    account,
+	// 	Context: ctx,
+	// })
+	// if err != nil {
+	// 	return defs.StageUnknown, err
+	// }
+	switch defs.StageRegistration {
 	case 0:
 		return defs.StageRegistration, nil
 	case 1:

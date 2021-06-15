@@ -28,3 +28,13 @@ func (s Stage) String() string {
 		return "nearby"
 	}
 }
+
+// SocialSource ...
+type SocialSource byte
+
+const (
+	// UnknownSource ...
+	UnknownSource SocialSource = 0 + iota
+	// FacebookSource ...
+	FacebookSource
+)

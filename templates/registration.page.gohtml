@@ -100,32 +100,35 @@
 {{ define "body" }}
     <div class="container">
         <div class="main">
-            <h2>Join Promotion</h2>
-            <section class="inputs-section">
-                <div class="input-wrap">
-                    <label for="wallet-input">Wallet Address</label>
-                    <input class="input-cred" id="wallet-input" placeholder="Wallet Address" />
-                </div>
-                <div class="input-wrap">
-                    <label for="nickname-input">Your Nick</label>
-                    <input class="input-cred" id="nickname-input" placeholder="Your Nick" />
-                </div>
-            </section>
-            <section class="buttons-section">
-                <button class="button-connect">
-                    <div class="button-connect-content"><img class="via-icon" src="public/icon-google.svg" />
-                        <p>Via Google</p>
+            <form method="POST" action="/register/facebook">
+                <h2>Join Promotion</h2>
+                <section class="inputs-section">
+                    <div class="input-wrap">
+                        <label for="wallet-input">Wallet Address</label>
+                        <input class="input-cred" id="wallet-input" name="wallet" placeholder="Wallet Address" />
                     </div>
-                </button>
-                <button class="button-connect">
-                    <div class="button-connect-content"><img class="via-icon" src="public/icon-facebook.svg" />Via
-                        Facebook</div>
-                </button>
-                <button class="button-connect">
-                    <div class="button-connect-content"><img class="via-icon" src="public/icon-twitter.svg" />Via
-                        Twitter</div>
-                </button>
-            </section>
+                    {{ if .NicknameRequired }}
+                    <div class="input-wrap">
+                        <label for="nickname-input">Your Nick</label>
+                        <input class="input-cred" id="nickname-input" name="nickname" placeholder="Your Nick" />
+                    </div>
+                    {{ end }}
+                </section>
+                <section class="buttons-section">
+                    {{ if .FacebookSupport }}
+                    <button class="connect facebook button-connect">
+                        <div class="button-connect-content"><img class="via-icon" src="static/images/icon-facebook.svg" />Via
+                            Facebook</div>
+                    </button>
+                    {{ end }}
+                    {{ if .TwitterSupport }}
+                    <button class="connect twitter button-connect">
+                        <div class="button-connect-content"><img class="via-icon" src="static/images/icon-twitter.svg" />Via
+                            Twitter</div>
+                    </button>
+                    {{ end }}
+                </section>
+            </form>
         </div>
     </div>
 {{ end }}

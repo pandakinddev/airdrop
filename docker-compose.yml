@@ -8,6 +8,4 @@ services:
       POSTGRES_PASSWORD: postgres
     ports: 
      - "5432:5432"
-    volumes: 
-        - ./docker/pg/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
     

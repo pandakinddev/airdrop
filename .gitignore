@@ -1,1 +1,4 @@
 *.env
+__debug*
+./logs
+./temp

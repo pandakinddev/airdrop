@@ -1113,107 +1113,107 @@ func (_IERC20 *IERC20Filterer) ParseTransfer(log types.Log) (*IERC20Transfer, er
 	return event, nil
 }
 
-// TimedABI is the input ABI used to generate the binding from.
-const TimedABI = "[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_REG_TIME\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_CLAIM_TIME\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"CLAIM_TIME\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"INIT_TIME\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"REG_TIME\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"status\",\"outputs\":[{\"internalType\":\"enumTimed.Status\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]"
+// SimpleAirdropABI is the input ABI used to generate the binding from.
+const SimpleAirdropABI = "[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_maxAirdropAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"date\",\"type\":\"uint256\"}],\"name\":\"AirdropProcessed\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"claimTokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentAirdropAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"maxAirdropAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"processedAirdrops\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contractIERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"updateAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]"
 
-// Timed is an auto generated Go binding around an Ethereum contract.
-type Timed struct {
-	TimedCaller     // Read-only binding to the contract
-	TimedTransactor // Write-only binding to the contract
-	TimedFilterer   // Log filterer for contract events
+// SimpleAirdrop is an auto generated Go binding around an Ethereum contract.
+type SimpleAirdrop struct {
+	SimpleAirdropCaller     // Read-only binding to the contract
+	SimpleAirdropTransactor // Write-only binding to the contract
+	SimpleAirdropFilterer   // Log filterer for contract events
 }
 
-// TimedCaller is an auto generated read-only Go binding around an Ethereum contract.
-type TimedCaller struct {
+// SimpleAirdropCaller is an auto generated read-only Go binding around an Ethereum contract.
+type SimpleAirdropCaller struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// TimedTransactor is an auto generated write-only Go binding around an Ethereum contract.
-type TimedTransactor struct {
+// SimpleAirdropTransactor is an auto generated write-only Go binding around an Ethereum contract.
+type SimpleAirdropTransactor struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// TimedFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
-type TimedFilterer struct {
+// SimpleAirdropFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
+type SimpleAirdropFilterer struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// TimedSession is an auto generated Go binding around an Ethereum contract,
+// SimpleAirdropSession is an auto generated Go binding around an Ethereum contract,
 // with pre-set call and transact options.
-type TimedSession struct {
-	Contract     *Timed            // Generic contract binding to set the session for
+type SimpleAirdropSession struct {
+	Contract     *SimpleAirdrop    // Generic contract binding to set the session for
 	CallOpts     bind.CallOpts     // Call options to use throughout this session
 	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
 }
 
-// TimedCallerSession is an auto generated read-only Go binding around an Ethereum contract,
+// SimpleAirdropCallerSession is an auto generated read-only Go binding around an Ethereum contract,
 // with pre-set call options.
-type TimedCallerSession struct {
-	Contract *TimedCaller  // Generic contract caller binding to set the session for
-	CallOpts bind.CallOpts // Call options to use throughout this session
+type SimpleAirdropCallerSession struct {
+	Contract *SimpleAirdropCaller // Generic contract caller binding to set the session for
+	CallOpts bind.CallOpts        // Call options to use throughout this session
 }
 
-// TimedTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
+// SimpleAirdropTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
 // with pre-set transact options.
-type TimedTransactorSession struct {
-	Contract     *TimedTransactor  // Generic contract transactor binding to set the session for
-	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
+type SimpleAirdropTransactorSession struct {
+	Contract     *SimpleAirdropTransactor // Generic contract transactor binding to set the session for
+	TransactOpts bind.TransactOpts        // Transaction auth options to use throughout this session
 }
 
-// TimedRaw is an auto generated low-level Go binding around an Ethereum contract.
-type TimedRaw struct {
-	Contract *Timed // Generic contract binding to access the raw methods on
+// SimpleAirdropRaw is an auto generated low-level Go binding around an Ethereum contract.
+type SimpleAirdropRaw struct {
+	Contract *SimpleAirdrop // Generic contract binding to access the raw methods on
 }
 
-// TimedCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
-type TimedCallerRaw struct {
-	Contract *TimedCaller // Generic read-only contract binding to access the raw methods on
+// SimpleAirdropCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
+type SimpleAirdropCallerRaw struct {
+	Contract *SimpleAirdropCaller // Generic read-only contract binding to access the raw methods on
 }
 
-// TimedTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
-type TimedTransactorRaw struct {
-	Contract *TimedTransactor // Generic write-only contract binding to access the raw methods on
+// SimpleAirdropTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
+type SimpleAirdropTransactorRaw struct {
+	Contract *SimpleAirdropTransactor // Generic write-only contract binding to access the raw methods on
 }
 
-// NewTimed creates a new instance of Timed, bound to a specific deployed contract.
-func NewTimed(address common.Address, backend bind.ContractBackend) (*Timed, error) {
-	contract, err := bindTimed(address, backend, backend, backend)
+// NewSimpleAirdrop creates a new instance of SimpleAirdrop, bound to a specific deployed contract.
+func NewSimpleAirdrop(address common.Address, backend bind.ContractBackend) (*SimpleAirdrop, error) {
+	contract, err := bindSimpleAirdrop(address, backend, backend, backend)
 	if err != nil {
 		return nil, err
 	}
-	return &Timed{TimedCaller: TimedCaller{contract: contract}, TimedTransactor: TimedTransactor{contract: contract}, TimedFilterer: TimedFilterer{contract: contract}}, nil
+	return &SimpleAirdrop{SimpleAirdropCaller: SimpleAirdropCaller{contract: contract}, SimpleAirdropTransactor: SimpleAirdropTransactor{contract: contract}, SimpleAirdropFilterer: SimpleAirdropFilterer{contract: contract}}, nil
 }
 
-// NewTimedCaller creates a new read-only instance of Timed, bound to a specific deployed contract.
-func NewTimedCaller(address common.Address, caller bind.ContractCaller) (*TimedCaller, error) {
-	contract, err := bindTimed(address, caller, nil, nil)
+// NewSimpleAirdropCaller creates a new read-only instance of SimpleAirdrop, bound to a specific deployed contract.
+func NewSimpleAirdropCaller(address common.Address, caller bind.ContractCaller) (*SimpleAirdropCaller, error) {
+	contract, err := bindSimpleAirdrop(address, caller, nil, nil)
 	if err != nil {
 		return nil, err
 	}
-	return &TimedCaller{contract: contract}, nil
+	return &SimpleAirdropCaller{contract: contract}, nil
 }
 
-// NewTimedTransactor creates a new write-only instance of Timed, bound to a specific deployed contract.
-func NewTimedTransactor(address common.Address, transactor bind.ContractTransactor) (*TimedTransactor, error) {
-	contract, err := bindTimed(address, nil, transactor, nil)
+// NewSimpleAirdropTransactor creates a new write-only instance of SimpleAirdrop, bound to a specific deployed contract.
+func NewSimpleAirdropTransactor(address common.Address, transactor bind.ContractTransactor) (*SimpleAirdropTransactor, error) {
+	contract, err := bindSimpleAirdrop(address, nil, transactor, nil)
 	if err != nil {
 		return nil, err
 	}
-	return &TimedTransactor{contract: contract}, nil
+	return &SimpleAirdropTransactor{contract: contract}, nil
 }
 
-// NewTimedFilterer creates a new log filterer instance of Timed, bound to a specific deployed contract.
-func NewTimedFilterer(address common.Address, filterer bind.ContractFilterer) (*TimedFilterer, error) {
-	contract, err := bindTimed(address, nil, nil, filterer)
+// NewSimpleAirdropFilterer creates a new log filterer instance of SimpleAirdrop, bound to a specific deployed contract.
+func NewSimpleAirdropFilterer(address common.Address, filterer bind.ContractFilterer) (*SimpleAirdropFilterer, error) {
+	contract, err := bindSimpleAirdrop(address, nil, nil, filterer)
 	if err != nil {
 		return nil, err
 	}
-	return &TimedFilterer{contract: contract}, nil
+	return &SimpleAirdropFilterer{contract: contract}, nil
 }
 
-// bindTimed binds a generic wrapper to an already deployed contract.
-func bindTimed(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
-	parsed, err := abi.JSON(strings.NewReader(TimedABI))
+// bindSimpleAirdrop binds a generic wrapper to an already deployed contract.
+func bindSimpleAirdrop(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
+	parsed, err := abi.JSON(strings.NewReader(SimpleAirdropABI))
 	if err != nil {
 		return nil, err
 	}
@@ -1224,408 +1224,46 @@ func bindTimed(address common.Address, caller bind.ContractCaller, transactor bi
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_Timed *TimedRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _Timed.Contract.TimedCaller.contract.Call(opts, result, method, params...)
+func (_SimpleAirdrop *SimpleAirdropRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _SimpleAirdrop.Contract.SimpleAirdropCaller.contract.Call(opts, result, method, params...)
 }
 
 // Transfer initiates a plain transaction to move funds to the contract, calling
 // its default method if one is available.
-func (_Timed *TimedRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Timed.Contract.TimedTransactor.contract.Transfer(opts)
+func (_SimpleAirdrop *SimpleAirdropRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _SimpleAirdrop.Contract.SimpleAirdropTransactor.contract.Transfer(opts)
 }
 
 // Transact invokes the (paid) contract method with params as input values.
-func (_Timed *TimedRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _Timed.Contract.TimedTransactor.contract.Transact(opts, method, params...)
+func (_SimpleAirdrop *SimpleAirdropRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _SimpleAirdrop.Contract.SimpleAirdropTransactor.contract.Transact(opts, method, params...)
 }
 
 // Call invokes the (constant) contract method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_Timed *TimedCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _Timed.Contract.contract.Call(opts, result, method, params...)
+func (_SimpleAirdrop *SimpleAirdropCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _SimpleAirdrop.Contract.contract.Call(opts, result, method, params...)
 }
 
 // Transfer initiates a plain transaction to move funds to the contract, calling
 // its default method if one is available.
-func (_Timed *TimedTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Timed.Contract.contract.Transfer(opts)
+func (_SimpleAirdrop *SimpleAirdropTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _SimpleAirdrop.Contract.contract.Transfer(opts)
 }
 
 // Transact invokes the (paid) contract method with params as input values.
-func (_Timed *TimedTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _Timed.Contract.contract.Transact(opts, method, params...)
-}
-
-// CLAIMTIME is a free data retrieval call binding the contract method 0x3bcaba8b.
-//
-// Solidity: function CLAIM_TIME() view returns(uint256)
-func (_Timed *TimedCaller) CLAIMTIME(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _Timed.contract.Call(opts, &out, "CLAIM_TIME")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// CLAIMTIME is a free data retrieval call binding the contract method 0x3bcaba8b.
-//
-// Solidity: function CLAIM_TIME() view returns(uint256)
-func (_Timed *TimedSession) CLAIMTIME() (*big.Int, error) {
-	return _Timed.Contract.CLAIMTIME(&_Timed.CallOpts)
-}
-
-// CLAIMTIME is a free data retrieval call binding the contract method 0x3bcaba8b.
-//
-// Solidity: function CLAIM_TIME() view returns(uint256)
-func (_Timed *TimedCallerSession) CLAIMTIME() (*big.Int, error) {
-	return _Timed.Contract.CLAIMTIME(&_Timed.CallOpts)
-}
-
-// INITTIME is a free data retrieval call binding the contract method 0xfb841c6d.
-//
-// Solidity: function INIT_TIME() view returns(uint256)
-func (_Timed *TimedCaller) INITTIME(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _Timed.contract.Call(opts, &out, "INIT_TIME")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// INITTIME is a free data retrieval call binding the contract method 0xfb841c6d.
-//
-// Solidity: function INIT_TIME() view returns(uint256)
-func (_Timed *TimedSession) INITTIME() (*big.Int, error) {
-	return _Timed.Contract.INITTIME(&_Timed.CallOpts)
-}
-
-// INITTIME is a free data retrieval call binding the contract method 0xfb841c6d.
-//
-// Solidity: function INIT_TIME() view returns(uint256)
-func (_Timed *TimedCallerSession) INITTIME() (*big.Int, error) {
-	return _Timed.Contract.INITTIME(&_Timed.CallOpts)
-}
-
-// REGTIME is a free data retrieval call binding the contract method 0x47f7b722.
-//
-// Solidity: function REG_TIME() view returns(uint256)
-func (_Timed *TimedCaller) REGTIME(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _Timed.contract.Call(opts, &out, "REG_TIME")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// REGTIME is a free data retrieval call binding the contract method 0x47f7b722.
-//
-// Solidity: function REG_TIME() view returns(uint256)
-func (_Timed *TimedSession) REGTIME() (*big.Int, error) {
-	return _Timed.Contract.REGTIME(&_Timed.CallOpts)
-}
-
-// REGTIME is a free data retrieval call binding the contract method 0x47f7b722.
-//
-// Solidity: function REG_TIME() view returns(uint256)
-func (_Timed *TimedCallerSession) REGTIME() (*big.Int, error) {
-	return _Timed.Contract.REGTIME(&_Timed.CallOpts)
-}
-
-// Status is a free data retrieval call binding the contract method 0x200d2ed2.
-//
-// Solidity: function status() view returns(uint8)
-func (_Timed *TimedCaller) Status(opts *bind.CallOpts) (uint8, error) {
-	var out []interface{}
-	err := _Timed.contract.Call(opts, &out, "status")
-
-	if err != nil {
-		return *new(uint8), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(uint8)).(*uint8)
-
-	return out0, err
-
-}
-
-// Status is a free data retrieval call binding the contract method 0x200d2ed2.
-//
-// Solidity: function status() view returns(uint8)
-func (_Timed *TimedSession) Status() (uint8, error) {
-	return _Timed.Contract.Status(&_Timed.CallOpts)
-}
-
-// Status is a free data retrieval call binding the contract method 0x200d2ed2.
-//
-// Solidity: function status() view returns(uint8)
-func (_Timed *TimedCallerSession) Status() (uint8, error) {
-	return _Timed.Contract.Status(&_Timed.CallOpts)
-}
-
-// TimedAirdropABI is the input ABI used to generate the binding from.
-const TimedAirdropABI = "[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_maxAirdropAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"date\",\"type\":\"uint256\"}],\"name\":\"AirdropProcessed\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"CLAIM_TIME\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"INIT_TIME\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"REG_TIME\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"claimTokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentAirdropAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"maxAirdropAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"processedAirdrops\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"status\",\"outputs\":[{\"internalType\":\"enumTimed.Status\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contractIERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"updateAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]"
-
-// TimedAirdrop is an auto generated Go binding around an Ethereum contract.
-type TimedAirdrop struct {
-	TimedAirdropCaller     // Read-only binding to the contract
-	TimedAirdropTransactor // Write-only binding to the contract
-	TimedAirdropFilterer   // Log filterer for contract events
-}
-
-// TimedAirdropCaller is an auto generated read-only Go binding around an Ethereum contract.
-type TimedAirdropCaller struct {
-	contract *bind.BoundContract // Generic contract wrapper for the low level calls
-}
-
-// TimedAirdropTransactor is an auto generated write-only Go binding around an Ethereum contract.
-type TimedAirdropTransactor struct {
-	contract *bind.BoundContract // Generic contract wrapper for the low level calls
-}
-
-// TimedAirdropFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
-type TimedAirdropFilterer struct {
-	contract *bind.BoundContract // Generic contract wrapper for the low level calls
-}
-
-// TimedAirdropSession is an auto generated Go binding around an Ethereum contract,
-// with pre-set call and transact options.
-type TimedAirdropSession struct {
-	Contract     *TimedAirdrop     // Generic contract binding to set the session for
-	CallOpts     bind.CallOpts     // Call options to use throughout this session
-	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
-}
-
-// TimedAirdropCallerSession is an auto generated read-only Go binding around an Ethereum contract,
-// with pre-set call options.
-type TimedAirdropCallerSession struct {
-	Contract *TimedAirdropCaller // Generic contract caller binding to set the session for
-	CallOpts bind.CallOpts       // Call options to use throughout this session
-}
-
-// TimedAirdropTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
-// with pre-set transact options.
-type TimedAirdropTransactorSession struct {
-	Contract     *TimedAirdropTransactor // Generic contract transactor binding to set the session for
-	TransactOpts bind.TransactOpts       // Transaction auth options to use throughout this session
-}
-
-// TimedAirdropRaw is an auto generated low-level Go binding around an Ethereum contract.
-type TimedAirdropRaw struct {
-	Contract *TimedAirdrop // Generic contract binding to access the raw methods on
-}
-
-// TimedAirdropCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
-type TimedAirdropCallerRaw struct {
-	Contract *TimedAirdropCaller // Generic read-only contract binding to access the raw methods on
-}
-
-// TimedAirdropTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
-type TimedAirdropTransactorRaw struct {
-	Contract *TimedAirdropTransactor // Generic write-only contract binding to access the raw methods on
-}
-
-// NewTimedAirdrop creates a new instance of TimedAirdrop, bound to a specific deployed contract.
-func NewTimedAirdrop(address common.Address, backend bind.ContractBackend) (*TimedAirdrop, error) {
-	contract, err := bindTimedAirdrop(address, backend, backend, backend)
-	if err != nil {
-		return nil, err
-	}
-	return &TimedAirdrop{TimedAirdropCaller: TimedAirdropCaller{contract: contract}, TimedAirdropTransactor: TimedAirdropTransactor{contract: contract}, TimedAirdropFilterer: TimedAirdropFilterer{contract: contract}}, nil
-}
-
-// NewTimedAirdropCaller creates a new read-only instance of TimedAirdrop, bound to a specific deployed contract.
-func NewTimedAirdropCaller(address common.Address, caller bind.ContractCaller) (*TimedAirdropCaller, error) {
-	contract, err := bindTimedAirdrop(address, caller, nil, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &TimedAirdropCaller{contract: contract}, nil
-}
-
-// NewTimedAirdropTransactor creates a new write-only instance of TimedAirdrop, bound to a specific deployed contract.
-func NewTimedAirdropTransactor(address common.Address, transactor bind.ContractTransactor) (*TimedAirdropTransactor, error) {
-	contract, err := bindTimedAirdrop(address, nil, transactor, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &TimedAirdropTransactor{contract: contract}, nil
-}
-
-// NewTimedAirdropFilterer creates a new log filterer instance of TimedAirdrop, bound to a specific deployed contract.
-func NewTimedAirdropFilterer(address common.Address, filterer bind.ContractFilterer) (*TimedAirdropFilterer, error) {
-	contract, err := bindTimedAirdrop(address, nil, nil, filterer)
-	if err != nil {
-		return nil, err
-	}
-	return &TimedAirdropFilterer{contract: contract}, nil
-}
-
-// bindTimedAirdrop binds a generic wrapper to an already deployed contract.
-func bindTimedAirdrop(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
-	parsed, err := abi.JSON(strings.NewReader(TimedAirdropABI))
-	if err != nil {
-		return nil, err
-	}
-	return bind.NewBoundContract(address, parsed, caller, transactor, filterer), nil
-}
-
-// Call invokes the (constant) contract method with params as input values and
-// sets the output to result. The result type might be a single field for simple
-// returns, a slice of interfaces for anonymous returns and a struct for named
-// returns.
-func (_TimedAirdrop *TimedAirdropRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _TimedAirdrop.Contract.TimedAirdropCaller.contract.Call(opts, result, method, params...)
-}
-
-// Transfer initiates a plain transaction to move funds to the contract, calling
-// its default method if one is available.
-func (_TimedAirdrop *TimedAirdropRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _TimedAirdrop.Contract.TimedAirdropTransactor.contract.Transfer(opts)
-}
-
-// Transact invokes the (paid) contract method with params as input values.
-func (_TimedAirdrop *TimedAirdropRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _TimedAirdrop.Contract.TimedAirdropTransactor.contract.Transact(opts, method, params...)
-}
-
-// Call invokes the (constant) contract method with params as input values and
-// sets the output to result. The result type might be a single field for simple
-// returns, a slice of interfaces for anonymous returns and a struct for named
-// returns.
-func (_TimedAirdrop *TimedAirdropCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _TimedAirdrop.Contract.contract.Call(opts, result, method, params...)
-}
-
-// Transfer initiates a plain transaction to move funds to the contract, calling
-// its default method if one is available.
-func (_TimedAirdrop *TimedAirdropTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _TimedAirdrop.Contract.contract.Transfer(opts)
-}
-
-// Transact invokes the (paid) contract method with params as input values.
-func (_TimedAirdrop *TimedAirdropTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _TimedAirdrop.Contract.contract.Transact(opts, method, params...)
-}
-
-// CLAIMTIME is a free data retrieval call binding the contract method 0x3bcaba8b.
-//
-// Solidity: function CLAIM_TIME() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCaller) CLAIMTIME(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _TimedAirdrop.contract.Call(opts, &out, "CLAIM_TIME")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// CLAIMTIME is a free data retrieval call binding the contract method 0x3bcaba8b.
-//
-// Solidity: function CLAIM_TIME() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropSession) CLAIMTIME() (*big.Int, error) {
-	return _TimedAirdrop.Contract.CLAIMTIME(&_TimedAirdrop.CallOpts)
-}
-
-// CLAIMTIME is a free data retrieval call binding the contract method 0x3bcaba8b.
-//
-// Solidity: function CLAIM_TIME() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCallerSession) CLAIMTIME() (*big.Int, error) {
-	return _TimedAirdrop.Contract.CLAIMTIME(&_TimedAirdrop.CallOpts)
-}
-
-// INITTIME is a free data retrieval call binding the contract method 0xfb841c6d.
-//
-// Solidity: function INIT_TIME() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCaller) INITTIME(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _TimedAirdrop.contract.Call(opts, &out, "INIT_TIME")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// INITTIME is a free data retrieval call binding the contract method 0xfb841c6d.
-//
-// Solidity: function INIT_TIME() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropSession) INITTIME() (*big.Int, error) {
-	return _TimedAirdrop.Contract.INITTIME(&_TimedAirdrop.CallOpts)
-}
-
-// INITTIME is a free data retrieval call binding the contract method 0xfb841c6d.
-//
-// Solidity: function INIT_TIME() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCallerSession) INITTIME() (*big.Int, error) {
-	return _TimedAirdrop.Contract.INITTIME(&_TimedAirdrop.CallOpts)
-}
-
-// REGTIME is a free data retrieval call binding the contract method 0x47f7b722.
-//
-// Solidity: function REG_TIME() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCaller) REGTIME(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _TimedAirdrop.contract.Call(opts, &out, "REG_TIME")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// REGTIME is a free data retrieval call binding the contract method 0x47f7b722.
-//
-// Solidity: function REG_TIME() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropSession) REGTIME() (*big.Int, error) {
-	return _TimedAirdrop.Contract.REGTIME(&_TimedAirdrop.CallOpts)
-}
-
-// REGTIME is a free data retrieval call binding the contract method 0x47f7b722.
-//
-// Solidity: function REG_TIME() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCallerSession) REGTIME() (*big.Int, error) {
-	return _TimedAirdrop.Contract.REGTIME(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _SimpleAirdrop.Contract.contract.Transact(opts, method, params...)
 }
 
 // Admin is a free data retrieval call binding the contract method 0xf851a440.
 //
 // Solidity: function admin() view returns(address)
-func (_TimedAirdrop *TimedAirdropCaller) Admin(opts *bind.CallOpts) (common.Address, error) {
+func (_SimpleAirdrop *SimpleAirdropCaller) Admin(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _TimedAirdrop.contract.Call(opts, &out, "admin")
+	err := _SimpleAirdrop.contract.Call(opts, &out, "admin")
 
 	if err != nil {
 		return *new(common.Address), err
@@ -1640,23 +1278,23 @@ func (_TimedAirdrop *TimedAirdropCaller) Admin(opts *bind.CallOpts) (common.Addr
 // Admin is a free data retrieval call binding the contract method 0xf851a440.
 //
 // Solidity: function admin() view returns(address)
-func (_TimedAirdrop *TimedAirdropSession) Admin() (common.Address, error) {
-	return _TimedAirdrop.Contract.Admin(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropSession) Admin() (common.Address, error) {
+	return _SimpleAirdrop.Contract.Admin(&_SimpleAirdrop.CallOpts)
 }
 
 // Admin is a free data retrieval call binding the contract method 0xf851a440.
 //
 // Solidity: function admin() view returns(address)
-func (_TimedAirdrop *TimedAirdropCallerSession) Admin() (common.Address, error) {
-	return _TimedAirdrop.Contract.Admin(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropCallerSession) Admin() (common.Address, error) {
+	return _SimpleAirdrop.Contract.Admin(&_SimpleAirdrop.CallOpts)
 }
 
 // CurrentAirdropAmount is a free data retrieval call binding the contract method 0x7424bab1.
 //
 // Solidity: function currentAirdropAmount() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCaller) CurrentAirdropAmount(opts *bind.CallOpts) (*big.Int, error) {
+func (_SimpleAirdrop *SimpleAirdropCaller) CurrentAirdropAmount(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _TimedAirdrop.contract.Call(opts, &out, "currentAirdropAmount")
+	err := _SimpleAirdrop.contract.Call(opts, &out, "currentAirdropAmount")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -1671,23 +1309,23 @@ func (_TimedAirdrop *TimedAirdropCaller) CurrentAirdropAmount(opts *bind.CallOpt
 // CurrentAirdropAmount is a free data retrieval call binding the contract method 0x7424bab1.
 //
 // Solidity: function currentAirdropAmount() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropSession) CurrentAirdropAmount() (*big.Int, error) {
-	return _TimedAirdrop.Contract.CurrentAirdropAmount(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropSession) CurrentAirdropAmount() (*big.Int, error) {
+	return _SimpleAirdrop.Contract.CurrentAirdropAmount(&_SimpleAirdrop.CallOpts)
 }
 
 // CurrentAirdropAmount is a free data retrieval call binding the contract method 0x7424bab1.
 //
 // Solidity: function currentAirdropAmount() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCallerSession) CurrentAirdropAmount() (*big.Int, error) {
-	return _TimedAirdrop.Contract.CurrentAirdropAmount(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropCallerSession) CurrentAirdropAmount() (*big.Int, error) {
+	return _SimpleAirdrop.Contract.CurrentAirdropAmount(&_SimpleAirdrop.CallOpts)
 }
 
 // MaxAirdropAmount is a free data retrieval call binding the contract method 0x23efeb12.
 //
 // Solidity: function maxAirdropAmount() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCaller) MaxAirdropAmount(opts *bind.CallOpts) (*big.Int, error) {
+func (_SimpleAirdrop *SimpleAirdropCaller) MaxAirdropAmount(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _TimedAirdrop.contract.Call(opts, &out, "maxAirdropAmount")
+	err := _SimpleAirdrop.contract.Call(opts, &out, "maxAirdropAmount")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -1702,23 +1340,23 @@ func (_TimedAirdrop *TimedAirdropCaller) MaxAirdropAmount(opts *bind.CallOpts) (
 // MaxAirdropAmount is a free data retrieval call binding the contract method 0x23efeb12.
 //
 // Solidity: function maxAirdropAmount() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropSession) MaxAirdropAmount() (*big.Int, error) {
-	return _TimedAirdrop.Contract.MaxAirdropAmount(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropSession) MaxAirdropAmount() (*big.Int, error) {
+	return _SimpleAirdrop.Contract.MaxAirdropAmount(&_SimpleAirdrop.CallOpts)
 }
 
 // MaxAirdropAmount is a free data retrieval call binding the contract method 0x23efeb12.
 //
 // Solidity: function maxAirdropAmount() view returns(uint256)
-func (_TimedAirdrop *TimedAirdropCallerSession) MaxAirdropAmount() (*big.Int, error) {
-	return _TimedAirdrop.Contract.MaxAirdropAmount(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropCallerSession) MaxAirdropAmount() (*big.Int, error) {
+	return _SimpleAirdrop.Contract.MaxAirdropAmount(&_SimpleAirdrop.CallOpts)
 }
 
 // ProcessedAirdrops is a free data retrieval call binding the contract method 0x32ffa783.
 //
 // Solidity: function processedAirdrops(address ) view returns(bool)
-func (_TimedAirdrop *TimedAirdropCaller) ProcessedAirdrops(opts *bind.CallOpts, arg0 common.Address) (bool, error) {
+func (_SimpleAirdrop *SimpleAirdropCaller) ProcessedAirdrops(opts *bind.CallOpts, arg0 common.Address) (bool, error) {
 	var out []interface{}
-	err := _TimedAirdrop.contract.Call(opts, &out, "processedAirdrops", arg0)
+	err := _SimpleAirdrop.contract.Call(opts, &out, "processedAirdrops", arg0)
 
 	if err != nil {
 		return *new(bool), err
@@ -1733,54 +1371,23 @@ func (_TimedAirdrop *TimedAirdropCaller) ProcessedAirdrops(opts *bind.CallOpts, 
 // ProcessedAirdrops is a free data retrieval call binding the contract method 0x32ffa783.
 //
 // Solidity: function processedAirdrops(address ) view returns(bool)
-func (_TimedAirdrop *TimedAirdropSession) ProcessedAirdrops(arg0 common.Address) (bool, error) {
-	return _TimedAirdrop.Contract.ProcessedAirdrops(&_TimedAirdrop.CallOpts, arg0)
+func (_SimpleAirdrop *SimpleAirdropSession) ProcessedAirdrops(arg0 common.Address) (bool, error) {
+	return _SimpleAirdrop.Contract.ProcessedAirdrops(&_SimpleAirdrop.CallOpts, arg0)
 }
 
 // ProcessedAirdrops is a free data retrieval call binding the contract method 0x32ffa783.
 //
 // Solidity: function processedAirdrops(address ) view returns(bool)
-func (_TimedAirdrop *TimedAirdropCallerSession) ProcessedAirdrops(arg0 common.Address) (bool, error) {
-	return _TimedAirdrop.Contract.ProcessedAirdrops(&_TimedAirdrop.CallOpts, arg0)
-}
-
-// Status is a free data retrieval call binding the contract method 0x200d2ed2.
-//
-// Solidity: function status() view returns(uint8)
-func (_TimedAirdrop *TimedAirdropCaller) Status(opts *bind.CallOpts) (uint8, error) {
-	var out []interface{}
-	err := _TimedAirdrop.contract.Call(opts, &out, "status")
-
-	if err != nil {
-		return *new(uint8), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(uint8)).(*uint8)
-
-	return out0, err
-
-}
-
-// Status is a free data retrieval call binding the contract method 0x200d2ed2.
-//
-// Solidity: function status() view returns(uint8)
-func (_TimedAirdrop *TimedAirdropSession) Status() (uint8, error) {
-	return _TimedAirdrop.Contract.Status(&_TimedAirdrop.CallOpts)
-}
-
-// Status is a free data retrieval call binding the contract method 0x200d2ed2.
-//
-// Solidity: function status() view returns(uint8)
-func (_TimedAirdrop *TimedAirdropCallerSession) Status() (uint8, error) {
-	return _TimedAirdrop.Contract.Status(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropCallerSession) ProcessedAirdrops(arg0 common.Address) (bool, error) {
+	return _SimpleAirdrop.Contract.ProcessedAirdrops(&_SimpleAirdrop.CallOpts, arg0)
 }
 
 // Token is a free data retrieval call binding the contract method 0xfc0c546a.
 //
 // Solidity: function token() view returns(address)
-func (_TimedAirdrop *TimedAirdropCaller) Token(opts *bind.CallOpts) (common.Address, error) {
+func (_SimpleAirdrop *SimpleAirdropCaller) Token(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _TimedAirdrop.contract.Call(opts, &out, "token")
+	err := _SimpleAirdrop.contract.Call(opts, &out, "token")
 
 	if err != nil {
 		return *new(common.Address), err
@@ -1795,62 +1402,62 @@ func (_TimedAirdrop *TimedAirdropCaller) Token(opts *bind.CallOpts) (common.Addr
 // Token is a free data retrieval call binding the contract method 0xfc0c546a.
 //
 // Solidity: function token() view returns(address)
-func (_TimedAirdrop *TimedAirdropSession) Token() (common.Address, error) {
-	return _TimedAirdrop.Contract.Token(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropSession) Token() (common.Address, error) {
+	return _SimpleAirdrop.Contract.Token(&_SimpleAirdrop.CallOpts)
 }
 
 // Token is a free data retrieval call binding the contract method 0xfc0c546a.
 //
 // Solidity: function token() view returns(address)
-func (_TimedAirdrop *TimedAirdropCallerSession) Token() (common.Address, error) {
-	return _TimedAirdrop.Contract.Token(&_TimedAirdrop.CallOpts)
+func (_SimpleAirdrop *SimpleAirdropCallerSession) Token() (common.Address, error) {
+	return _SimpleAirdrop.Contract.Token(&_SimpleAirdrop.CallOpts)
 }
 
 // ClaimTokens is a paid mutator transaction binding the contract method 0x14d8bbf1.
 //
 // Solidity: function claimTokens(uint256 amount, bytes signature) returns()
-func (_TimedAirdrop *TimedAirdropTransactor) ClaimTokens(opts *bind.TransactOpts, amount *big.Int, signature []byte) (*types.Transaction, error) {
-	return _TimedAirdrop.contract.Transact(opts, "claimTokens", amount, signature)
+func (_SimpleAirdrop *SimpleAirdropTransactor) ClaimTokens(opts *bind.TransactOpts, amount *big.Int, signature []byte) (*types.Transaction, error) {
+	return _SimpleAirdrop.contract.Transact(opts, "claimTokens", amount, signature)
 }
 
 // ClaimTokens is a paid mutator transaction binding the contract method 0x14d8bbf1.
 //
 // Solidity: function claimTokens(uint256 amount, bytes signature) returns()
-func (_TimedAirdrop *TimedAirdropSession) ClaimTokens(amount *big.Int, signature []byte) (*types.Transaction, error) {
-	return _TimedAirdrop.Contract.ClaimTokens(&_TimedAirdrop.TransactOpts, amount, signature)
+func (_SimpleAirdrop *SimpleAirdropSession) ClaimTokens(amount *big.Int, signature []byte) (*types.Transaction, error) {
+	return _SimpleAirdrop.Contract.ClaimTokens(&_SimpleAirdrop.TransactOpts, amount, signature)
 }
 
 // ClaimTokens is a paid mutator transaction binding the contract method 0x14d8bbf1.
 //
 // Solidity: function claimTokens(uint256 amount, bytes signature) returns()
-func (_TimedAirdrop *TimedAirdropTransactorSession) ClaimTokens(amount *big.Int, signature []byte) (*types.Transaction, error) {
-	return _TimedAirdrop.Contract.ClaimTokens(&_TimedAirdrop.TransactOpts, amount, signature)
+func (_SimpleAirdrop *SimpleAirdropTransactorSession) ClaimTokens(amount *big.Int, signature []byte) (*types.Transaction, error) {
+	return _SimpleAirdrop.Contract.ClaimTokens(&_SimpleAirdrop.TransactOpts, amount, signature)
 }
 
 // UpdateAdmin is a paid mutator transaction binding the contract method 0xe2f273bd.
 //
 // Solidity: function updateAdmin(address newAdmin) returns()
-func (_TimedAirdrop *TimedAirdropTransactor) UpdateAdmin(opts *bind.TransactOpts, newAdmin common.Address) (*types.Transaction, error) {
-	return _TimedAirdrop.contract.Transact(opts, "updateAdmin", newAdmin)
+func (_SimpleAirdrop *SimpleAirdropTransactor) UpdateAdmin(opts *bind.TransactOpts, newAdmin common.Address) (*types.Transaction, error) {
+	return _SimpleAirdrop.contract.Transact(opts, "updateAdmin", newAdmin)
 }
 
 // UpdateAdmin is a paid mutator transaction binding the contract method 0xe2f273bd.
 //
 // Solidity: function updateAdmin(address newAdmin) returns()
-func (_TimedAirdrop *TimedAirdropSession) UpdateAdmin(newAdmin common.Address) (*types.Transaction, error) {
-	return _TimedAirdrop.Contract.UpdateAdmin(&_TimedAirdrop.TransactOpts, newAdmin)
+func (_SimpleAirdrop *SimpleAirdropSession) UpdateAdmin(newAdmin common.Address) (*types.Transaction, error) {
+	return _SimpleAirdrop.Contract.UpdateAdmin(&_SimpleAirdrop.TransactOpts, newAdmin)
 }
 
 // UpdateAdmin is a paid mutator transaction binding the contract method 0xe2f273bd.
 //
 // Solidity: function updateAdmin(address newAdmin) returns()
-func (_TimedAirdrop *TimedAirdropTransactorSession) UpdateAdmin(newAdmin common.Address) (*types.Transaction, error) {
-	return _TimedAirdrop.Contract.UpdateAdmin(&_TimedAirdrop.TransactOpts, newAdmin)
+func (_SimpleAirdrop *SimpleAirdropTransactorSession) UpdateAdmin(newAdmin common.Address) (*types.Transaction, error) {
+	return _SimpleAirdrop.Contract.UpdateAdmin(&_SimpleAirdrop.TransactOpts, newAdmin)
 }
 
-// TimedAirdropAirdropProcessedIterator is returned from FilterAirdropProcessed and is used to iterate over the raw logs and unpacked data for AirdropProcessed events raised by the TimedAirdrop contract.
-type TimedAirdropAirdropProcessedIterator struct {
-	Event *TimedAirdropAirdropProcessed // Event containing the contract specifics and raw log
+// SimpleAirdropAirdropProcessedIterator is returned from FilterAirdropProcessed and is used to iterate over the raw logs and unpacked data for AirdropProcessed events raised by the SimpleAirdrop contract.
+type SimpleAirdropAirdropProcessedIterator struct {
+	Event *SimpleAirdropAirdropProcessed // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1864,7 +1471,7 @@ type TimedAirdropAirdropProcessedIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *TimedAirdropAirdropProcessedIterator) Next() bool {
+func (it *SimpleAirdropAirdropProcessedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1873,7 +1480,7 @@ func (it *TimedAirdropAirdropProcessedIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(TimedAirdropAirdropProcessed)
+			it.Event = new(SimpleAirdropAirdropProcessed)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1888,7 +1495,7 @@ func (it *TimedAirdropAirdropProcessedIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(TimedAirdropAirdropProcessed)
+		it.Event = new(SimpleAirdropAirdropProcessed)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1904,19 +1511,19 @@ func (it *TimedAirdropAirdropProcessedIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *TimedAirdropAirdropProcessedIterator) Error() error {
+func (it *SimpleAirdropAirdropProcessedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *TimedAirdropAirdropProcessedIterator) Close() error {
+func (it *SimpleAirdropAirdropProcessedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// TimedAirdropAirdropProcessed represents a AirdropProcessed event raised by the TimedAirdrop contract.
-type TimedAirdropAirdropProcessed struct {
+// SimpleAirdropAirdropProcessed represents a AirdropProcessed event raised by the SimpleAirdrop contract.
+type SimpleAirdropAirdropProcessed struct {
 	Recipient common.Address
 	Amount    *big.Int
 	Date      *big.Int
@@ -1926,21 +1533,21 @@ type TimedAirdropAirdropProcessed struct {
 // FilterAirdropProcessed is a free log retrieval operation binding the contract event 0xc0312d3bf25e86c787fa77f4d038213e428dc722e16d38ca9719e987d20f7c7c.
 //
 // Solidity: event AirdropProcessed(address recipient, uint256 amount, uint256 date)
-func (_TimedAirdrop *TimedAirdropFilterer) FilterAirdropProcessed(opts *bind.FilterOpts) (*TimedAirdropAirdropProcessedIterator, error) {
+func (_SimpleAirdrop *SimpleAirdropFilterer) FilterAirdropProcessed(opts *bind.FilterOpts) (*SimpleAirdropAirdropProcessedIterator, error) {
 
-	logs, sub, err := _TimedAirdrop.contract.FilterLogs(opts, "AirdropProcessed")
+	logs, sub, err := _SimpleAirdrop.contract.FilterLogs(opts, "AirdropProcessed")
 	if err != nil {
 		return nil, err
 	}
-	return &TimedAirdropAirdropProcessedIterator{contract: _TimedAirdrop.contract, event: "AirdropProcessed", logs: logs, sub: sub}, nil
+	return &SimpleAirdropAirdropProcessedIterator{contract: _SimpleAirdrop.contract, event: "AirdropProcessed", logs: logs, sub: sub}, nil
 }
 
 // WatchAirdropProcessed is a free log subscription operation binding the contract event 0xc0312d3bf25e86c787fa77f4d038213e428dc722e16d38ca9719e987d20f7c7c.
 //
 // Solidity: event AirdropProcessed(address recipient, uint256 amount, uint256 date)
-func (_TimedAirdrop *TimedAirdropFilterer) WatchAirdropProcessed(opts *bind.WatchOpts, sink chan<- *TimedAirdropAirdropProcessed) (event.Subscription, error) {
+func (_SimpleAirdrop *SimpleAirdropFilterer) WatchAirdropProcessed(opts *bind.WatchOpts, sink chan<- *SimpleAirdropAirdropProcessed) (event.Subscription, error) {
 
-	logs, sub, err := _TimedAirdrop.contract.WatchLogs(opts, "AirdropProcessed")
+	logs, sub, err := _SimpleAirdrop.contract.WatchLogs(opts, "AirdropProcessed")
 	if err != nil {
 		return nil, err
 	}
@@ -1950,8 +1557,8 @@ func (_TimedAirdrop *TimedAirdropFilterer) WatchAirdropProcessed(opts *bind.Watc
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(TimedAirdropAirdropProcessed)
-				if err := _TimedAirdrop.contract.UnpackLog(event, "AirdropProcessed", log); err != nil {
+				event := new(SimpleAirdropAirdropProcessed)
+				if err := _SimpleAirdrop.contract.UnpackLog(event, "AirdropProcessed", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1975,9 +1582,9 @@ func (_TimedAirdrop *TimedAirdropFilterer) WatchAirdropProcessed(opts *bind.Watc
 // ParseAirdropProcessed is a log parse operation binding the contract event 0xc0312d3bf25e86c787fa77f4d038213e428dc722e16d38ca9719e987d20f7c7c.
 //
 // Solidity: event AirdropProcessed(address recipient, uint256 amount, uint256 date)
-func (_TimedAirdrop *TimedAirdropFilterer) ParseAirdropProcessed(log types.Log) (*TimedAirdropAirdropProcessed, error) {
-	event := new(TimedAirdropAirdropProcessed)
-	if err := _TimedAirdrop.contract.UnpackLog(event, "AirdropProcessed", log); err != nil {
+func (_SimpleAirdrop *SimpleAirdropFilterer) ParseAirdropProcessed(log types.Log) (*SimpleAirdropAirdropProcessed, error) {
+	event := new(SimpleAirdropAirdropProcessed)
+	if err := _SimpleAirdrop.contract.UnpackLog(event, "AirdropProcessed", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log

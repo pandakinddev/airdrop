@@ -35,11 +35,14 @@ var (
 		Long:  ``,
 	}
 	mappings = map[string]string{
-		"env":      "ENV",
-		"bind":     "BIND_ADDR",
-		"db_url":   "PG_URL",
-		"priv_key": "PRIVATE_KEY",
-		"rpc":      "RPC_URL",
+		"env":           "ENV",
+		"bind":          "BIND_ADDR",
+		"db_url":        "PG_URL",
+		"priv_key":      "PRIVATE_KEY",
+		"rpc":           "RPC_URL",
+		"base_url":      "BASE_URL",
+		"fb_app_id":     "FACEBOOK_APP_ID",
+		"fb_app_secret": "FACEBOOK_APP_KEY",
 	}
 )
 
